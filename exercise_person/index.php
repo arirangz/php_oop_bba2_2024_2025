@@ -1,7 +1,14 @@
 <?php
 require_once "Person.php";
 
-$johnDoe = new Person("John", "Doe", 30);
+try {
+    $johnDoe = new Person("John", "Doe", 20);
+
+    $johnDoe->setAge(25);
+} catch (\InvalidArgumentException $e) {
+    $errorMessage = $e->getMessage();
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +21,12 @@ $johnDoe = new Person("John", "Doe", 30);
 </head>
 
 <body>
-    <h1><?= $johnDoe->getFullName() ?></h1>
+    <?php if (isset($johnDoe)): ?>
+        <h1><?= $johnDoe->getFullName() ?></h1>
+        <h2>Age: <?= $johnDoe->getAge() ?></h2>
+    <?php else: ?>
+        <h1><?= $errorMessage; ?></h1>
+    <?php endif; ?>
 </body>
 
 </html>

@@ -15,9 +15,9 @@ $rectangle1 = new Rectangle(10, 20, "red");
 
 <body>
     <h1>Rectangle</h1>
-    <p>Width: <?= $rectangle1->width; ?>m</p>
-    <p>Length: <?= $rectangle1->length; ?>m</p>
-    <p>Color: <?= $rectangle1->color; ?></p>
+    <p>Width: <?= $rectangle1->getWidth(); ?>m</p>
+    <p>Length: <?= $rectangle1->getLength(); ?>m</p>
+    <p>Color: <?= $rectangle1->getColor(); ?></p>
     <p>Area: <?= $rectangle1->calculateArea(); ?>m²</p>
 </body>
 
