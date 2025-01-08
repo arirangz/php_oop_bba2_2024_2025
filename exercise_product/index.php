@@ -20,6 +20,7 @@ $dellLaptopProduct->vat = 20;
     <article>
         <h2><?= $dellLaptopProduct->name ?></h2>
         <h3>Price: <?= $dellLaptopProduct->price ?> €</h3>
+        <h3>Price With VAT: <?= $dellLaptopProduct->getPriceWithVat() ?> €</h3>
     </article>
 </body>
 
