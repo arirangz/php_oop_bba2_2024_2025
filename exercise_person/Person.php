@@ -2,9 +2,9 @@
 
 class Person
 {
-    private string $firstName;
-    private string $lastName;
-    private int $age;
+    protected string $firstName;
+    protected string $lastName;
+    protected int $age;
 
     public function __construct(string $firstName, string $lastName, int $age)
     {
