@@ -57,4 +57,9 @@ class Employee extends Person
 
         return $this;
     }
+
+    public function getFullName(): string
+    {
+        return parent::getFullName() . " " . $this->getPosition();
+    }
 }

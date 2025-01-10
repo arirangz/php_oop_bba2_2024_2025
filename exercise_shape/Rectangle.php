@@ -1,16 +1,16 @@
 <?php
 
-class Rectangle
+class Rectangle extends Shape
 {
     public float $length;
     public float $width;
-    public string $color;
+
 
     public function __construct(float $length, float $width, string $color)
     {
         $this->setWidth($width);
         $this->setLength($length);
-        $this->setColor($color);
+        parent::__construct($color);
     }
 
     public function calculateArea(): float
@@ -62,21 +62,4 @@ class Rectangle
         return $this;
     }
 
-    /**
-     * Get the value of color
-     */
-    public function getColor(): string
-    {
-        return $this->color;
-    }
-
-    /**
-     * Set the value of color
-     */
-    public function setColor(string $color): self
-    {
-        $this->color = $color;
-
-        return $this;
-    }
 }
