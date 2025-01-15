@@ -18,6 +18,11 @@ $temparatures = [10, 20, -2, 32, 15, 5];
         <h3>Max: <?=ArrayTools::getMax($marks)?></h3>
         <h3>Min: <?=ArrayTools::getMin($marks)?></h3>
     </section>
+    <section>
+        <h2>Temperature</h2>
+        <h3>Max: <?=ArrayTools::getMax($temparatures)?></h3>
+        <h3>Min: <?=ArrayTools::getMin($temparatures)?></h3>
+    </section>
 </body>
 </html>
 
