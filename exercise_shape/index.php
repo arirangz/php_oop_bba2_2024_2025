@@ -28,6 +28,8 @@ $circle1 = new Circle(20, "blue");
     <p>Radius: <?=$circle1->getRadius()?></p>
     <p>Color: <?=$circle1->getColor()?></p>
     <p>Area: <?=$circle1->calculateArea()?>m²</p>
+
+    <h2>Count: <?=Shape::getCount(); ?></h2>
 </body>
 
 </html>
