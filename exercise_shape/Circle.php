@@ -9,6 +9,10 @@ class Circle extends Shape
         parent::__construct($color);
         $this->setRadius($radius);
     }
+    public function calculateArea(): float
+    {
+        return round(pi()*pow($this->radius,2),2);
+    }
 
     /**
      * Get the value of radius
@@ -28,8 +32,5 @@ class Circle extends Shape
         return $this;
     }
 
-    public function calculateArea(): float
-    {
-        return round(pi()*pow($this->radius,2),2);
-    }
+
 }
